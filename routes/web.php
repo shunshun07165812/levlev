@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,4 +12,5 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/posts', [PostController::class, 'index']);
+Route::get('/',[PostController::class, 'index']);
+Route::get('/posts/{post}', [PostController::class ,'show']);
